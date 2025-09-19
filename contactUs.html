@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="abcoJavaScript.js"></script>
+		<link rel="stylesheet" type="text/css" href="abco.css">
+		<title>ABCO Machining</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div id="header" class="row text-center">
+				<div class="container-fluid banner-div">
+					<img src="./Assets/BANNERtuvII.png" alt="The Banner" class="img-responsive center-block banner-img">
+				</div><!--end of img div-->
+				
+				<!-- the nav bar -->
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">ABCO</a>
+						</div>
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="capabilities.html">Capabilities</a></li>
+							<li><a href="equipment.html">Equipment</a></li>
+							<li class="active"><a href="contactUs.html">Contact us</a></li>
+							<li><a href="directions.html">Directions</a></li>
+						</ul>
+					</div><!--end of container for nav bar-->
+					
+				</nav><!--end of nav bar-->
+		</div><!--end of the header row-->
+		
+		</div><!--end of the header row-->
+			
+		<div class="row building-img-row">
+			<div class="container-fluid">
+				<img src="./Assets/contactheader-II.jpg" alt="The contactUs sub-banner" class="img-responsive center-block building-img"  width="830">
+			</div><!--end of img div-->
+		</div><!--end of the row for the image for below nav bar-->
+	
+		<!--The contact form-->
+		<div class="container-fluid text-primary text-center">
+			<div class="row form-format text-center">
+				<div class="col-xs-* ">
+					<form id="my_form" onSubmit="submitForm(); return false;" class="form-format "><p></p>
+						<p><input id="n" placeholder="Name" class="form-control" required></p>
+						<p><input id="e" placeholder="Email Adress" type="email" class="form-control" required></p>
+						<textarea id="m" placeholder="Write your message here" rows="10" class="form-control" required></textarea>
+						<p><input id="mybtn" type="submit" value="Submit Email" class="btn  form-control form-submit-btn"><span id="status"></p>
+					</form>
+				</div>
+			</div>
+		</div><!--end of the container for the form-->
+		
+		<br><br><br>
+		
+		
+	</div><!--end of the fluid container-->
+</body>
+
+</html> <!--end of doc-->

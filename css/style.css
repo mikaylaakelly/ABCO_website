@@ -1,3 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* prevents horizontal scroll/edge */
+    background: url("../mikpics/background1.jpg") center/cover no-repeat fixed;
+}
+
+
+
+
 /* ========================
    GLOBAL STYLES
    ======================== */
@@ -13,15 +25,26 @@ body {
    HEADER / BANNER
    ======================== */
 .banner-div {
-    background-color: #a0c4ff; /* soft medium blue background */
+    background-color: #193157; /* existing soft blue */
+    padding: 15px 0; /* vertical padding */
+    text-align: center; /* center logo */
 }
 
 .banner-img {
-    padding-left: 10px;
-    max-width: 100%;
+    max-width: 500px; /* adjust size as needed */
+    width: 90%;       /* responsive scaling */
     height: auto;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* subtle shadow for depth */
+    border-radius: 12px; /* optional rounded edges */
 }
 
+/* Hover effect: slight lift */
+.banner-img:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
 /* ========================
    BUILDING IMAGE
    ======================== */
@@ -38,54 +61,164 @@ body {
 }
 
 /* ========================
-   NAVBAR STYLING
+   NAVBAR STYLING - MODERN BUTTON LOOK
+   ======================== */
+/* ========================
+   NAVBAR STYLING - MODERN BUTTON LOOK WITH RAISED EFFECT
    ======================== */
 .navbar {
-    background-color: #ffffff; /* light background */
+  background-color: rgba(51, 122, 183, 0.6); /* semi-transparent blue */
+  backdrop-filter: blur(10px);              /* frosted glass blur effect */
+  -webkit-backdrop-filter: blur(10px);      /* Safari support */
+  padding: 0.6rem 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15); /* subtle shadow */
+  position: relative;
+  z-index: 10;                               /* stays above content */
 }
 
 .navbar .navbar-brand {
-    color: #000000; /* brand black */
-    font-weight: bold;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.navbar .nav-link {
-    color: #000000; /* links black */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between buttons */
 }
 
-.navbar .nav-link:hover {
-    color: #333333; /* slightly darker on hover */
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 600;
+  background: linear-gradient(145deg, #3a8fd4, #2d6ba6); /* nice gradient for buttons */
+  border: 2px solid #1c5299; /* darker border to stand out */
+  border-radius: 25px;
+  padding: 8px 18px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* slightly raised look */
 }
 
-.navbar .nav-link.active {
-    font-weight: bold;
+/* Hover effect - lift and glow */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #337AB7;
+  background: #ffffff;
+  border-color: #1c3f6d;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  transform: translateY(-3px); /* slightly higher lift */
 }
+
+/* Active / current page */
+.navbar-nav .nav-link.active {
+  color: #337AB7;
+  background: #ffffff;
+  border-color: #1c3f6d;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Pressed effect */
+.navbar-nav .nav-link:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+}
+
+
+
+/* Background section styling */
+.about-section {
+  position: relative;
+  background-image: url("../mikpics/background1.jpg"); /* or your desired image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* nice parallax effect */
+  color: #776969;
+  min-height: 100vh;
+}
+
+/* Optional dark overlay for readability */
+.about-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* adjustable opacity */
+  z-index: 1;
+}
+
+/* Make sure text and cards stay above overlay */
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card styling improvements */
+.about-section .card {
+  border: none;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
 
 /* ========================
    CARD STYLING
    ======================== */
+/* ========================
+   CARD STYLING - BIGGER CARDS
+   ======================== */
 .card-container {
   display: flex;
-  flex-wrap: wrap;            /* Allow cards to wrap on smaller screens */
-  gap: 20px;                  /* Space between cards */
-  justify-content: center;    /* Center cards in the container */
-  margin-top: 40px;           /* Top margin for spacing */
-  padding: 0 10px;            /* Optional: small horizontal padding */
+  flex-wrap: wrap;            
+  gap: 30px;                  /* more space between cards */
+  justify-content: center;    /* center cards */
+  margin-top: 50px;           
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
+/* Make cards bigger and override previous styles */
+.about-section .card,
 .card-container .card {
-  flex: 1 1 250px;            /* Grow, shrink, base width of 250px */
-  max-width: 300px;           /* Prevent cards from being too wide */
-  min-width: 220px;           /* Prevent cards from being too small */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: subtle shadow */
-  transition: transform 0.2s; /* Optional: smooth hover effect */
+  flex: 1 1 45% !important;       /* roughly 2 per row on large screens */
+  max-width: 600px !important;    /* wider cards */
+  min-height: 450px !important;   /* taller cards */
+  padding: 25px !important;       /* more inner spacing */
+  box-shadow: 0 6px 25px rgba(0,0,0,0.35) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
+/* Hover effect for bigger visual impact */
+.about-section .card:hover,
 .card-container .card:hover {
-  transform: translateY(-5px); /* Optional: lift effect on hover */
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.45) !important;
 }
 
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .about-section .card,
+  .card-container .card {
+    flex: 1 1 80% !important;      /* almost full width */
+    max-width: 90% !important;
+    min-height: 350px !important;
+  }
+}
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-section .card,
+  .card-container .card {
+    flex: 1 1 100% !important;     /* full width */
+    max-width: 150% !important;
+    min-height: 250px !important;
+  }
+}
 
 
 /* ========================

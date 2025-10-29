@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ABCO Machining</title>
+  <title>ABCO Machining - Contact & Directions</title>
 
   <!-- Bootstrap 5 CSS -->
   <link
@@ -32,70 +32,81 @@
 </head>
 <body>
 
-  <div class="container-fluid">
+<div class="container-fluid">
 
-    <!-- Header -->
-    <div id="header" class="row text-center">
-      <div class="container-fluid banner-div">
-        <img src="./mikpics/HighDefLogo.jpg" alt="The Banner"
-          class="img-responsive center-block banner-img">
-      </div>
-
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #337AB7;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="color: #000000; font-weight: bold;"></a>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="capabilities.html">Capabilities</a></li> 
-            <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
-            <li class="nav-item"><a class="nav-link active" href="contactUs.html">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="directions.html">Directions</a></li>
-          </ul>
-        </div>
-      </nav>
+  <!-- Header / Banner -->
+  <div id="header" class="row text-center">
+    <div class="container-fluid banner-div">
+      <img src="./mikpics/HighDefLogo.jpg" alt="The Banner" class="img-fluid mx-auto d-block banner-img">
     </div>
 
-    <!-- Sub-banner -->
-    <div class="row building-img-row">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #337AB7;">
       <div class="container-fluid">
-        <img src="./Assets/contactheader-II.jpg"
-          alt="Contact Us Sub-banner"
-          class="img-responsive center-block building-img"
-          width="830">
+        <a class="navbar-brand" href="#" style="color: #000000; font-weight: bold;"></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+          <li class="nav-item"><a class="nav-link nav-btn" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-btn" href="capabilities.html">Capabilities</a></li>
+          <li class="nav-item"><a class="nav-link nav-btn" href="equipment.html">Equipment</a></li>
+          <li class="nav-item"><a class="nav-link nav-btn" href="contactUs.html">Contact Us</a></li>
+          <!-- <li class="nav-item"><a class="nav-link nav-btn active" href="directions.html">Directions</a></li> -->
+        </ul>
       </div>
-    </div>
+    </nav>
+  </div>
 
-    <!-- Contact Form -->
-    <div class="container-fluid text-primary text-center">
-      <div class="row form-format text-center">
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5 center-block">
+  <!-- Contact Header with Overlay -->
+  
+<section class="contact-header-section position-relative text-light">
+  <div class="overlay"></div>
+  <img src="./Assets/contactheader-II.jpg" 
+       alt="Contact Us Sub-banner" 
+       class="img-fluid mx-auto d-block header-img">
+  <div class="container position-relative text-center py-3">
+    <h1 class="display-4 text-white">Have Questions? Contact Us</h1>
+    <p class="lead text-white">Leave a small description of your issue/question and we will get back to you as soon as possible!</p>
+  </div>
+</section>
 
-          <form id="my_form" onsubmit="submitForm(); return false;"
-            class="form-format">
 
-            <p><input id="n" placeholder="Name"
-                class="form-control" required></p>
+  <!-- Contact Form + Directions Section with Overlay -->
+  <section class="contact-directions-section position-relative text-light py-5">
+    <div class="overlay"></div>
+    <div class="container position-relative">
 
-            <p><input id="e" placeholder="Email Address" type="email"
-                class="form-control" required></p>
-
-            <p><textarea id="m"
-                placeholder="Write your message here"
-                rows="10" class="form-control" required></textarea></p>
-
-            <p><input id="mybtn" type="submit" value="Submit Email"
-                class="btn btn-primary form-control form-submit-btn"></p>
-
+      <!-- Contact Form -->
+      <div class="row form-format justify-content-center mb-5">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
+          <form id="my_form" onsubmit="submitForm(); return false;" class="form-format">
+            <p><input id="n" placeholder="Name" class="form-control" required></p>
+            <p><input id="e" placeholder="Email Address" type="email" class="form-control" required></p>
+            <p><textarea id="m" placeholder="Write your message here" rows="10" class="form-control" required></textarea></p>
+            <p><input id="mybtn" type="submit" value="Submit Email" class="btn btn-primary form-control form-submit-btn"></p>
             <p id="status"></p>
           </form>
-
         </div>
       </div>
+
+      <!-- Directions / Google Map -->
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3086.468202183067!2d-84.22440568535119!3d39.32297647950726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884058441515a98f%3A0x3c27fdababf6ca13!2sAbco+Bar+%26+Tube+Cutting+Services!5e0!3m2!1sen!2sus!4v1483056900255" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <br><br><br>
+</div><!-- end container-fluid -->
 
-  </div>
+<!-- Bootstrap 5 JS Bundle -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  crossorigin="anonymous"
+></script>
 </body>
 </html>

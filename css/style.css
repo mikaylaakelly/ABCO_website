@@ -67,7 +67,7 @@ body {
    NAVBAR STYLING - RAISED EFFECT
    ======================== */
 .navbar {
-  background-color: rgba(51, 122, 183, 0.6); /* semi-transparent blue */
+  background-color: rgba(65, 153, 212, 0.6); /* semi-transparent blue */
   backdrop-filter: blur(10px);              /* frosted glass blur effect */
   -webkit-backdrop-filter: blur(10px);      /* Safari support */
   padding: 0.6rem 1rem;

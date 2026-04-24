@@ -32,11 +32,17 @@
 </head>
 
 <body>
-<div class="container-fluid">
-  <div id="header" class="row text-center">
-    <div class="container-fluid banner-div">
-      <img src="./mikpics/HighDefLogo.jpg" alt="The Banner" class="img-responsive center-block banner-img">
-    </div><!--end of img div-->
+<div id="header" class="row text-center">
+  <div class="col-md-6 banner-div">
+    <img src="./mikpics/HighDefLogo.jpg" alt="The Banner"
+         class="img-fluid mx-auto d-block banner-img">
+  </div>
+
+  <div class="col-md-6 banner-div">
+    <img src="./mikpics/ABCO Ariel.jpg" alt="The Banner"
+         class="img-fluid mx-auto d-block banner-img">
+  </div>
+</div>><!--end of img div-->
 
     <!-- the nav bar -->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #337AB7;">
@@ -45,9 +51,10 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li> 
+          <li class="nav-item"><a class="nav-link nav-btn" href="capabilities.html">Capabilities</a></li>
           <li class="nav-item"><a class="nav-link active" href="equipment.html">Equipment</a></li>
           <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="directions.html">Directions</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         </ul>
       </div>
     </nav>
@@ -69,142 +76,351 @@
 
       <div class="row g-4 justify-content-center">
 
-        <!-- Multi-Axis Twin Turrets -->
+        
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card bg-dark bg-opacity-75 text-white h-100">
-            <div class="card-header">Multi-Axis Twin Turrets</div>
-            <div class="card-body">
-              <!-- <h5 class="card-title"></h5> text can be added -->
-              <p class="card-text">
-                <ul>
-                  <li>Nakamura-Tome Super NTM3: 3 turrets, dual spindle, dual Y, 2.5" bar capacity</li>
-                  <li>Eurotech 710 SLLY2(2): twin spindle, twin turret, DualY-axis, 3" bar capacity</li>
-                  <li>Eurotech 465 SY2: twin spindle, twin turret, Dual Y-axis, 2 3/4” bar capacity</li>
-                  <li>Eurotech B438Y2: twin spindle, twin turret, Dual Y-axis, angled live tools, 1 ½” bar capacity</li>
-                  <li>Miyano 34-S2: twin spindle, twin turret, 1 ¼” bar capacity</li>
-                  <li>Lico LNT 42 CNC Screw Machine: multi-axis, sub spindle, 4 tools cutting simultaneous, 1.625" bar capacity
-                    <ul>
-                      <li><u>All equipped with magazine bar feeds, live tools, and high-pressure coolant, yr 2010-2024</u></li>
-                    </ul>
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+  <div class="card bg-dark bg-opacity-75 text-white h-100">
+    <div class="card-header section-title">Multi-Axis Twin Turrets</div>
 
-        <!-- Multi-Axis Single Turrets -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card bg-dark bg-opacity-75 text-white h-100">
-            <div class="card-header">Multi-Axis Single Turrets</div>
-            <div class="card-body">
-              <p class="card-text">
-                <ul>
-                  <li>Eurotech 658 SLY: Y axis with live tooling, dual spindle, 4" bar capacity, HP coolant</li>
-                  <li>Eurotech 658 S: Dual spindle 4" bar capacity, HP coolant</li>
-                  <li>Eurotech 735 SLY: Y-axis with live tooling, dual spindle, 2 ¾” bar cap, HP coolant</li>
-                  <li>Eurotech CMZ 640: Y-axis with live tooling, dual spindle, 2 ½” bar cap, HP coolant</li>
-                  <li>Miyano BND34-T3: live tooling, sub turret, 1 ¼” bar capacity</li>
-                  <li>Miyano 20S: live tooling, sub spindle, ¾” bar capacity
-                    <ul>
-                      <li><u>All equipped with magazine bar feeds, yr 2000-2023</u></li>
-                    </ul>
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+    <div class="card-body">
 
-        <!-- 2 Axis -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card bg-dark bg-opacity-75 text-white h-100">
-            <div class="card-header">2 Axis</div>
-            <div class="card-body">
-              <p class="card-text">
-                <ul>
-                  <li>Feeler FTC 200L (2): 2.5" bar capacity</li>
-                  <li>Miyano 34-T (2): sub-turret, 1.25" bar capacity</li>
-                  <li>Miyano LE-22B: live tooling, 2" bar capacity</li>
-                  <li>Miyano BND42-T (2): sub turret, 1.625" bar capacity</li>
-                  <li>Hardinge Talent 852: 8” chuck</li>
-                  <li>Hurco TM8: 8” chuck
-                    <ul>
-                      <li><u>All equipped with magazine bar feeds, yr 1990-2020</u></li>
-                    </ul>
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+      <ul class="list-unstyled">
 
-        <!-- Swiss Turning -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card bg-dark bg-opacity-75 text-white h-100">
-            <div class="card-header">Swiss Turning</div>
-            <div class="card-body">
-              <p class="card-text">
-                <ul>
-                  <li>Tsugami S205-II: 7-axis, Live tools, sub spindle, ¾” bar capacity, YR 2022</li>
-                  <li>Ganesh Cyclone 32CS: 7-axis, Live tools, 1-1/4” bar capacity Yr 2018</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+        <li class="mb-3">
+          <strong>Nakamura-Tome Super NTM3</strong>
+          <ul>
+            <li>3 turrets, dual spindle, dual Y, 2.5" bar capacity</li>
+          </ul>
+        </li>
 
-        <!-- CNC Vertical Milling Centers -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card bg-dark bg-opacity-75 text-white h-100">
-            <div class="card-header">CNC Vertical Milling Centers</div>
-            <div class="card-body">
-              <p class="card-text">
-                <ul>
-                  <li>Haas VF-7: 8100 RPM, 84”L x 32” W x 30” H, 10” 4 axis Rotary, 2 head 5-axis Trunnion, loaded with all available options, yr 2016</li>
-                  <li>Haas VF-9/40: 8100 RPM, 84”L x 40” W x 30” H, 10” 4 axis Rotary, 2 head 5-axis Trunnion, loaded with all available options, yr 2024</li>
-                  <li>Haas VF-5SS: 8100 RPM, 60”L x 32” W x 24” H, 10” 4 axis Rotary, 2 head 5-axis Trunnion, loaded with all available options, yr 2018</li>
-                  <li>Hurco VMX60SRTI: 10k RPM, 60” L x 32” W x 30” H, 24” Integrated Rotary, Tilting B-Axis, 3+2 axis positioning, HP coolant</li>
-                  <li>Fanuc Robo Drill (2017) High speed 4 axis rotary</li>
-                  <li>Fanuc Robo Drill (2020) High speed 4 axis rotary</li>
-                  <li>YCM-NXV 560 APC: pallet changer, HP coolant, 12K RPM, 24”L x 14” W x 12” H table, yr 2015</li>
-                  <li>Bridge Port(2): digital read out, auto feed, adjustable angle heads</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+        <li class="mb-3">
+          <strong>Eurotech 710 SLLY2(2)</strong>
+          <ul>
+            <li>twin spindle, twin turret, dual Y-axis, 3" bar capacity</li>
+          </ul>
+        </li>
 
-        <!-- Quality / Inspection Equipment -->
+        <li class="mb-3">
+          <strong>Eurotech 465 SY2</strong>
+          <ul>
+            <li>twin spindle, twin turret, dual Y-axis, 2 3/4” bar capacity</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Eurotech B438Y2</strong>
+          <ul>
+            <li>twin spindle, twin turret, dual Y-axis, angled live tools, 1 ½” bar capacity</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Miyano 34-S2</strong>
+          <ul>
+            <li>twin spindle, twin turret, 1 ¼” bar capacity</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Lico LNT 42 CNC Screw Machine</strong>
+          <ul>
+            <li>multi-axis, sub spindle, 4 tools cutting simultaneously, 1.625" bar capacity</li>
+            <li><u>All equipped with magazine bar feeds, live tools, and high-pressure coolant, yr 2010–2024</u></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+       
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card bg-dark bg-opacity-75 text-white h-100">
-            <div class="card-header">Quality / Inspection Equipment</div>
-            <div class="card-body">
-              <p class="card-text">
-                <ul>
-                  <li>Hexagon 710 5-axis CMM: Fully programmable, 28” x 20” x 18” travels</li>
-                  <li>Hexagon Absolute Arm: 5-axis Romer arm cmm with scanning technology, 80” max reach</li>
-                  <li>Mitutoyo Linear Height Gage</li>
-                  <li>Optical Comparators (2)</li>
-                  <li>Thread gauges ID and OD with yearly calibration:
-                    <ul>
-                      <li>All American standard sizes</li>
-                      <li>Many British sizes</li>
-                      <li>Many Metric sizes</li>
-                    </ul>
-                  </li>
-                  <li>Mitutoyo surface profilometer SJ410: Skid less</li>
-                  <li>Indicators, calipers, thread mics, mics, parallels, pin gages, master gages, etc</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+  <div class="card bg-dark bg-opacity-75 text-white h-100">
+    <div class="card-header section-title">Multi-Axis Single Turrets</div>
+
+    <div class="card-body">
+
+      <ul class="list-unstyled">
+
+        <li class="mb-3">
+          <strong>Eurotech 658 SLY</strong>
+          <ul>
+            <li>Y axis with live tooling, dual spindle, 4" bar capacity, HP coolant</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Eurotech 658 S</strong>
+          <ul>
+            <li>Dual spindle, 4" bar capacity, HP coolant</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Eurotech 735 SLY</strong>
+          <ul>
+            <li>Y-axis with live tooling, dual spindle, 2 ¾” bar capacity, HP coolant</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Eurotech CMZ 640</strong>
+          <ul>
+            <li>Y-axis with live tooling, dual spindle, 2 ½” bar capacity, HP coolant</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Miyano BND34-T3</strong>
+          <ul>
+            <li>live tooling, sub turret, 1 ¼” bar capacity</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Miyano 20S</strong>
+          <ul>
+            <li>live tooling, sub spindle, ¾” bar capacity</li>
+            <li><u>All equipped with magazine bar feeds, yr 2000–2023</u></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+        
+        <div class="col-12 col-md-6 col-lg-3">
+  <div class="card bg-dark bg-opacity-75 text-white h-100">
+    <div class="card-header section-title">2 Axis</div>
+
+    <div class="card-body">
+
+      <ul class="list-unstyled">
+
+        <li class="mb-3">
+          <strong>Feeler FTC 200L (2)</strong>
+          <ul>
+            <li>2.5" bar capacity</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Miyano 34-T (2)</strong>
+          <ul>
+            <li>sub-turret, 1.25" bar capacity</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Miyano LE-22B</strong>
+          <ul>
+            <li>live tooling, 2" bar capacity</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Miyano BND42-T (2)</strong>
+          <ul>
+            <li>sub turret, 1.625" bar capacity</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Mazak QTN200-II</strong>
+          <ul>
+            <li>8” Chuck capacity, 2.5” bar capacity </li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Hurco TM8</strong>
+          <ul>
+            <li>8” Chuck capacity, 2.5” bar capacity </li>
+            <li><u>All equipped with magazine bar feeds, yr 1990–2020</u></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+        
+        <div class="col-12 col-md-6 col-lg-3">
+  <div class="card bg-dark bg-opacity-75 text-white h-100">
+    <div class="card-header section-title">Swiss Turning</div>
+
+    <div class="card-body">
+
+      <ul class="list-unstyled">
+
+        <li class="mb-3">
+          <strong>Tsugami S205-II</strong>
+          <ul>
+            <li>7-axis, live tools, sub spindle, ¾” bar capacity, YR 2022</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Ganesh Cyclone 32CS</strong>
+          <ul>
+            <li>7-axis, live tools, 1-1/4” bar capacity, YR 2018</li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+      
+        <div class="col-12 col-md-6 col-lg-3">
+  <div class="card bg-dark bg-opacity-75 text-white h-100">
+    <div class="card-header section-title">CNC Vertical Milling Centers</div>
+
+    <div class="card-body">
+
+      <ul class="list-unstyled">
+
+        <li class="mb-3">
+          <strong>Haas VF-7</strong>
+          <ul>
+            <li>8100 RPM, 84”L x 32”W x 30”H, 10” 4-axis rotary, 2-head 5-axis trunnion, loaded with all options, YR 2016</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Haas VF-9/40</strong>
+          <ul>
+            <li>8100 RPM, 84”L x 40”W x 30”H, 10” 4-axis rotary, 2-head 5-axis trunnion, loaded with all options, YR 2024</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Haas VF-5SS</strong>
+          <ul>
+            <li>8100 RPM, 60”L x 32”W x 24”H, 10” 4-axis rotary, 2-head 5-axis trunnion, loaded with all options, YR 2018</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Hurco VMX60SRTi</strong>
+          <ul>
+            <li>10k RPM, 60”L x 32”W x 30”H, 24” integrated rotary, tilting B-axis, 3+2 axis positioning, HP coolant</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Fanuc RoboDrill (2017)</strong>
+          <ul>
+            <li>High-speed 4-axis rotary</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Fanuc RoboDrill (2020)</strong>
+          <ul>
+            <li>High-speed 4-axis rotary</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>YCM-NXV 560 APC</strong>
+          <ul>
+            <li>Pallet changer, HP coolant, 12K RPM, 24”L x 14”W x 12”H table, YR 2015</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Bridgeport (2)</strong>
+          <ul>
+            <li>Digital readout, auto feed, adjustable angle heads</li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+        
+        <div class="col-12 col-md-6 col-lg-3">
+  <div class="card bg-dark bg-opacity-75 text-white h-100">
+    <div class="card-header section-title">Quality / Inspection Equipment</div>
+
+    <div class="card-body">
+
+      <ul class="list-unstyled">
+
+        <li class="mb-3">
+          <strong>Hexagon 710 5-axis CMM</strong>
+          <ul>
+            <li>Fully programmable, 28” x 20” x 18” travels</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Hexagon Absolute Arm</strong>
+          <ul>
+            <li>5-axis Romer arm CMM with scanning technology, 80” max reach</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Mitutoyo Linear Height Gage</strong>
+          <ul>
+            <li>Precision height measurement tool</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Optical Comparators (2)</strong>
+          <ul>
+            <li>Profile inspection systems</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Thread Gauges (ID & OD)</strong>
+          <ul>
+            <li>Yearly calibrated</li>
+            <li>All American standard sizes</li>
+            <li>Many British sizes</li>
+            <li>Many metric sizes</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>Mitutoyo Surface Profilometer SJ410</strong>
+          <ul>
+            <li>Skidless surface finish measurement</li>
+          </ul>
+        </li>
+
+        <li class="mb-3">
+          <strong>General Inspection Tools</strong>
+          <ul>
+            <li>Indicators, calipers, thread mics, micrometers, parallels, pin gages, master gages, etc.</li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
 
         <!-- Summarized Capabilities -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <!-- <div class="col-12 col-md-6 col-lg-3">
           <div class="card bg-dark bg-opacity-75 text-white h-100">
-            <div class="card-header">Milling & Turning Capabilities Summary</div>
+            <div class="card-header section-title">Milling & Turning Capabilities Summary</div>
             <div class="card-body">
               <p class="card-text">
                 <ul>
@@ -215,12 +431,12 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- Quality Procedures -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <!-- <div class="col-12 col-md-6 col-lg-3">
           <div class="card bg-dark bg-opacity-75 text-white h-100">
-            <div class="card-header">Quality Procedures</div>
+            <div class="card-header section-title">Quality Procedures</div>
             <div class="card-body">
               <p class="card-text">
                 <ul>
@@ -232,7 +448,7 @@
           </div>
         </div>
 
-      </div><!--end row-->
+      </div>end row -->
     </div><!--end container-->
 
 		<!-- ISO CERT SECTION -->

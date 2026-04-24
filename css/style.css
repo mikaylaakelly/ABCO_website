@@ -242,6 +242,39 @@ body {
     border-color: #5BC0DE;
     box-shadow: none;
 }
+/* =========================
+   GALLERY
+   ========================= */
+   .gallery-section {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("../mikpics/background1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.gallery-carousel {
+    max-width: 950px;
+}
+
+.gallery-carousel img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.carousel-inner {
+    border: 3px solid #337AB7;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #337AB7;
+    border-radius: 50%;
+    padding: 20px;
+}
 
 /* =========================
    REMOVE OLD BROKEN STYLE (IMPORTANT)

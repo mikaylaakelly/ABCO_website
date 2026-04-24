@@ -1,54 +1,10 @@
-// function _(id) {
-//   return document.getElementById(id);
-// }
-
-// function submitForm() {
-  // Disable submit button and show status
-  // _("mybtn").disabled = true;
-  // _("status").innerHTML = "Please wait...";
-
-  // Collect form data
-  // var formdata = new FormData();
-  // formdata.append("n", _("n").value); // name
-  // formdata.append("e", _("e").value); // email
-  // formdata.append("m", _("m").value); // message
-
-  // Create AJAX request
-  // var ajax = new XMLHttpRequest();
-  // ajax.open("POST", "example_parser.php", true);
-
-  // Handle response
-  // ajax.onreadystatechange = function () {
-  //   if (ajax.readyState === 4 && ajax.status === 200) {
-  //     // Trim whitespace from response
-  //     var response = ajax.responseText.trim();
-
-  //     if (response === "Success") {
-  //       _("my_form").innerHTML =
-  //         "<h2>Thanks, " +
-  //         _("n").value +
-  //         "! Your message has been sent.</h2>";
-  //     } else {
-  //       _("status").innerHTML = response;
-  //       _("mybtn").disabled = false;
-  //     }
-  //   }
-  // };
-
-  // Send data
-//   ajax.send(formdata);
-// }
 function _(id) {
   return document.getElementById(id);
 }
 
 function submitForm() {
-
   _("mybtn").disabled = true;
-
-  _("status").style.display = "block";
-  _("status").className = "";
-  _("status").innerHTML = "Sending message...";
+  _("status").innerHTML = "Sending...";
 
   var formdata = new FormData();
   formdata.append("n", _("n").value);
@@ -56,30 +12,34 @@ function submitForm() {
   formdata.append("m", _("m").value);
 
   var ajax = new XMLHttpRequest();
+
+  // IMPORTANT: this must match your GoDaddy file path
   ajax.open("POST", "example_parser.php", true);
 
-  ajax.onreadystatechange = function () {
+  ajax.onload = function () {
+    _("mybtn").disabled = false;
 
-    if (ajax.readyState === 4 && ajax.status === 200) {
-
+    if (ajax.status === 200) {
       var response = ajax.responseText.trim();
 
       if (response === "Success") {
-
-        _("status").className = "success";
-        _("status").innerHTML = "✔ Message sent successfully!";
-
+        _("status").innerHTML = "Message sent successfully!";
+        _("status").style.color = "lightgreen";
         _("my_form").reset();
-        _("mybtn").disabled = false;
-
       } else {
-
-        _("status").className = "error";
-        _("status").innerHTML = "⚠ " + response;
-
-        _("mybtn").disabled = false;
+        _("status").innerHTML = response;
+        _("status").style.color = "red";
       }
+    } else {
+      _("status").innerHTML = "Server error. Try again later.";
+      _("status").style.color = "red";
     }
+  };
+
+  ajax.onerror = function () {
+    _("status").innerHTML = "Request failed.";
+    _("status").style.color = "red";
+    _("mybtn").disabled = false;
   };
 
   ajax.send(formdata);

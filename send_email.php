@@ -5,15 +5,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var(trim($_POST["e"]), FILTER_SANITIZE_EMAIL);
     $message = trim($_POST["m"]);
 
+    // Your email
     $to = "amanda@abcomachining.com";
-    $subject = "Contact Form Submission from $name";
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: $email";
 
-    if (mail($to, $subject, $body, $headers)) {
+    $subject = "Website Contact Form: $name";
+
+    $body = "Name: $name\n";
+    $body .= "Email: $email\n\n";
+    $body .= "Message:\n$message";
+
+    $headers = "From: noreply@abcomachining.com\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
+    $success = mail($to, $subject, $body, $headers);
+
+    if ($success) {
         echo "Success";
     } else {
-        echo "Error sending message";
+        echo "Error sending email";
     }
+
+} else {
+    echo "Invalid request";
 }
 ?>

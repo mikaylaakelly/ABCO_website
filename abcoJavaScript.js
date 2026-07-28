@@ -13,11 +13,11 @@ function submitForm() {
     message: _("m").value
   };
 
-  emailjs.send(
-    "service_sf64wdj",
-    "template_ji00hef",
-    templateParams
-  )
+ emailjs.send(
+  "service_sf64wdj",
+  "template_uw4lqwo",
+  templateParams
+)
   .then(function(response) {
 
     console.log("SUCCESS", response);
